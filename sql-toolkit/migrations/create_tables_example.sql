@@ -1,0 +1,15 @@
+-- Exemplo de criação simplificada (adeque nomes/types)
+CREATE TABLE IF NOT EXISTS users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(120) NOT NULL,
+  email VARCHAR(120) NOT NULL UNIQUE,
+  password_hash VARCHAR(180) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS recipes (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(150) NOT NULL,
+  description TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

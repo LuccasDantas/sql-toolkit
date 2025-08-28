@@ -1,0 +1,7 @@
+# Backup (Linux/macOS)
+mysqldump -h HOST -u USER -p DB_NAME > backup.sql
+
+# Restore
+mysql -h HOST -u USER -p DB_NAME < backup.sql
+
+# Dica: use --single-transaction para bases grandes (InnoDB)
